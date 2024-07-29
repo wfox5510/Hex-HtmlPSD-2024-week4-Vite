@@ -1,0 +1,41 @@
+header {
+  background-color: $primary;
+}
+
+h1>a {
+  @extend %img-rplc-text;
+  @extend %background;
+  display: block;
+  background-image: url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/main/week3-4/logo-white.png");
+  width: 80px;
+  height: 48px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 12px 0px;
+  gap: 64px;
+
+  a {
+    display: block;
+  }
+  a:hover{
+    text-decoration: underline;
+  }
+  @include sm{
+    margin: 0px -12px;
+    padding: 0px;
+    gap: 0px;
+    flex-wrap: wrap;
+    li {
+      width: 49.9%;
+      border: 1px solid #FFFFFF;
+    }
+  
+    a {
+      text-align: center;
+      padding: 12px 60px;
+    }
+  }
+}
