@@ -89,9 +89,10 @@
   padding-bottom: 80px;
 
   @include lg {
-    padding: 80px 0px;
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
-  @include sm{
+  @include sm {
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -147,7 +148,8 @@
 .reviews {
   padding-top: 80px;
   padding-bottom: 80px;
-  @include sm{
+
+  @include sm {
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -175,6 +177,7 @@
     p {
       height: 72px;
     }
+
     padding: 16px;
   }
 
@@ -182,16 +185,19 @@
     width: 49.9%;
     padding: 12px 12px;
   }
-  @include sm{
+
+  @include sm {
     margin-bottom: 16px;
     width: 100%;
   }
 }
+
 .reviews-list-card:last-child {
-  @include sm{
+  @include sm {
     margin-bottom: 0px
   }
 }
+
 .date {
   font-size: 14px;
   color: $gray;
@@ -200,7 +206,8 @@
 .contact {
   background-color: $third;
   padding: 80px 0px;
-  @include sm{
+
+  @include sm {
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -214,7 +221,8 @@
   @include lg {
     max-width: 648px;
   }
-  @include sm{
+
+  @include sm {
     padding: 0px 12px;
   }
 }
@@ -246,7 +254,8 @@
     @include lg {
       padding: 16px 136px;
     }
-    @include sm{
+
+    @include sm {
       padding: 16px 0px;
       width: 100%;
     }
@@ -257,4 +266,18 @@
   }
 }
 
+.footer {
+  background-color: $primary;
+}
 
+.social-linklist-item {
+  width: 48px;
+
+  @include sm {
+    max-width: 24px;
+  }
+}
+
+.policy-link {
+  font-size: 14px;
+}

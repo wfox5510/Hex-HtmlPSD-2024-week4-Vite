@@ -1,0 +1,19 @@
+.store {
+  padding-top: 96px;
+  padding-bottom: 80px;
+  h2::before {
+    content: "";
+    border: 4px solid #9F1213;
+    margin-right: 16px;
+  }
+}
+
+.area-select{
+  width: 304px;
+  padding: 6px 12px;
+}
+.area-select-primary{
+  color: $select-primary;
+  font-size: 18px;
+  border: 1px solid $gray-100;
+}

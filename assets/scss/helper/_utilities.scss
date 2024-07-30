@@ -17,6 +17,12 @@
       }
     }
 
+    &r{
+      &-#{$i} {
+        margin-right: $i*4px;
+      }
+    }
+
     &l {
       &-auto {
         margin-left: auto;
@@ -127,6 +133,10 @@
 
   &-light {
     color: $light
+  }
+
+  &-dark{
+    color: $dark;
   }
 }
 

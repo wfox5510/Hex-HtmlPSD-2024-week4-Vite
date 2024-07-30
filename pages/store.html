@@ -12,7 +12,19 @@
 
 <body>
   <%- include('./layout/header'); -%>
-    
+    <main>
+      <section class="store">
+        <div class="container">
+          <h2 class="font-size-12 font-weight-bold color-dark mb-8">門市據點</h2>
+          <label for="area-select" class="font-size-6 mr-4">選擇地區</label>
+          <select name="area-select" id="area-select" class="area-select area-select-primary">
+            <option selected="selected" value="台北市">台北市</option>
+            <option value="台中市">台中市</option>
+            <option value="高雄市">高雄市</option>
+          </select>
+        </div>
+      </section>
+    </main>
   <%- include('./layout/footer'); -%>
   <script type="module" src="../main.js"></script>
 </body>
