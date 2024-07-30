@@ -257,17 +257,4 @@
   }
 }
 
-.footer {
-  background-color: $primary;
-}
 
-.social-linklist-item {
-  width: 48px;
-  @include sm{
-    max-width: 24px;
-  }
-}
-
-.policy-link {
-  font-size: 14px;
-}

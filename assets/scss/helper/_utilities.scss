@@ -2,75 +2,114 @@
   max-width: 1368px;
   margin: 0 auto;
   padding: 0px 36px;
+
   @include sm {
     padding-left: 12px;
     padding-right: 12px;
   }
 }
 
-.m {
-  &b {
-    &-1 {
-      margin-bottom: 4px;
+@for $i from 1 through 16 {
+  .m {
+    &b {
+      &-#{$i} {
+        margin-bottom: $i*4px;
+      }
     }
 
-    &-2 {
-      margin-bottom: 8px;
+    &l {
+      &-auto {
+        margin-left: auto;
+      }
     }
 
-    &-4 {
-      margin-bottom: 16px;
-    }
-
-    &-6 {
-      margin-bottom: 24px;
-    }
-
-    &-8 {
-      margin-bottom: 32px;
-    }
-
-    &-12 {
-      margin-bottom: 48px;
-    }
-  }
-
-  &l {
-    &-auto {
-      margin-left: auto;
-    }
-  }
-
-  &y {
-    &-2 {
-      margin-top: 8px;
-      margin-bottom: 8px;
+    &y {
+      &-#{$i} {
+        margin-top: $i*4px;
+        margin-bottom: $i*4px;
+      }
     }
   }
 }
 
-.p {
-  &-0 {
-    padding: 0px;
-  }
 
-  &t {
-    &-4 {
-      padding-top: 16px;
-    }
-
-    &-12 {
-      padding-top: 48px;
+@include lg {
+  @for $i from 1 through 16 {
+    .m {
+      &b-lg {
+        &-#{$i} {
+          margin-bottom: $i*4px;
+        }
+      }
     }
   }
+}
 
-  &b {
-    &-4 {
-      padding-bottom: 16px;
+
+@include sm {
+  @for $i from 1 through 16 {
+    .m {
+      &b-sm {
+        &-#{$i} {
+          margin-bottom: $i*4px;
+        }
+      }
+
+      &l-sm {
+        &-auto {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through 16 {
+  .p {
+    &-0 {
+      padding: 0px;
     }
 
-    &-8 {
-      padding-bottom: 32px;
+    &t {
+      &-#{$i} {
+        padding-top: $i*4px;
+      }
+    }
+
+    &b {
+      &-#{$i} {
+        padding-bottom: $i*4px;
+      }
+    }
+  }
+}
+
+@include lg {
+  @for $i from 1 through 16 {
+    .p {
+      &b-lg {
+        &-#{$i} {
+          padding-bottom: $i*4px;
+        }
+      }
+    }
+  }
+}
+
+@include sm {
+  @for $i from 1 through 16 {
+    .p {
+      &t-sm {
+        &-#{$i} {
+          padding-top: $i*4px;
+        }
+      }
+
+      &b-sm {
+        &-#{$i} {
+          padding-bottom: $i*4px;
+        }
+      }
     }
   }
 }
@@ -128,11 +167,51 @@
   &-none {
     display: none;
   }
+
+  @include lg {
+    &-lg {
+      &-flex {
+        display: flex;
+      }
+
+      &-block {
+        display: block;
+      }
+
+      &-none {
+        display: none;
+      }
+    }
+  }
+
+  @include sm {
+    &-sm {
+      &-flex {
+        display: flex;
+      }
+
+      &-block {
+        display: block;
+      }
+
+      &-none {
+        display: none;
+      }
+    }
+  }
 }
 
 .flex-direction {
   &-column {
     flex-direction: column;
+  }
+
+  @include sm {
+    &-sm {
+      &-column {
+        flex-direction: column;
+      }
+    }
   }
 }
 
@@ -148,51 +227,40 @@
   }
 }
 
-.gap {
-  &-1 {
-    gap: 4px
-  }
-
-  &-2 {
-    gap: 8px
-  }
-
-  &-8 {
-    gap: 32px;
-  }
-
-  &-12 {
-    gap: 48px;
-  }
-
-  &-16 {
-    gap: 64px;
+@for $i from 1 through 16 {
+  .gap-#{$i} {
+    gap: $i*4px;
   }
 }
 
-.font-size {
-  &-4 {
-    font-size: 16px;
+@include lg {
+  @for $i from 1 through 16 {
+    .gap-lg-#{$i} {
+      gap: $i*4px;
+    }
   }
+}
 
-  &-5 {
-    font-size: 20px;
+@include sm {
+  @for $i from 1 through 16 {
+    .gap-sm-#{$i} {
+      gap: $i*4px;
+    }
   }
+}
 
-  &-6 {
-    font-size: 24px;
+@for $i from 1 through 16 {
+  .font-size-#{$i} {
+    font-size: $i*4px;
   }
+}
 
-  &-9 {
-    font-size: 36px;
-  }
 
-  &-12 {
-    font-size: 48px;
-  }
-
-  &-16 {
-    font-size: 64px;
+@include sm {
+  @for $i from 1 through 16 {
+    .font-size-sm-#{$i} {
+      font-size: $i*4px;
+    }
   }
 }
 
@@ -205,98 +273,5 @@
 .font-weight {
   &-bold {
     font-weight: bold;
-  }
-}
-
-
-@media(max-width:992px) {
-  .m {
-    &b-lg {
-      &-6 {
-        margin-bottom: 24px;
-      }
-    }
-  }
-
-  .p {
-    &b-lg {
-      &-10 {
-        padding-bottom: 40px;
-      }
-    }
-  }
-}
-
-@media(max-width:576px) {
-  .d-sm {
-    &-flex {
-      display: flex;
-    }
-
-    &-block {
-      display: block;
-    }
-
-    &-none {
-      display: none;
-    }
-  }
-
-  .flex-direction-sm {
-    &-column {
-      flex-direction: column;
-    }
-  }
-
-  .m {
-    &b-sm {
-      &-5 {
-        margin-bottom: 20px;
-      }
-
-      &-6 {
-        margin-bottom: 24px;
-      }
-    }
-
-    &l-sm {
-      &-auto {
-        margin-left: auto;
-      }
-    }
-  }
-
-  .p {
-    &t-sm {
-      &-6 {
-        padding-top: 24px;
-      }
-    }
-
-    &b-sm {
-      &-6 {
-        padding-bottom: 24px;
-      }
-    }
-  }
-
-  .font-size-sm {
-    &-4 {
-      font-size: 16px;
-    }
-
-    &-5 {
-      font-size: 20px;
-    }
-
-    &-6 {
-      font-size: 24px;
-    }
-  }
-
-  .gap-sm {
-    &-2 {
-      gap: 8px;
-    }
   }
 }

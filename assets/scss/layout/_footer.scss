@@ -3,9 +3,15 @@
 }
 
 .social-linklist-item {
-  width: 48px;
+  max-width: 48px;
+  @include lg{
+    max-width: 40px;
+  }
+  @include sm{
+    max-width: 24px;
+  }
 }
 
-.policy-link{
+.policy-link {
   font-size: 14px;
 }
