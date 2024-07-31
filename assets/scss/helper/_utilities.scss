@@ -285,3 +285,10 @@
     font-weight: bold;
   }
 }
+ @for $i from 1 through $columns-num{
+  .col-#{$i}{
+    width: 100%*($i/12);
+    padding-left: $gap/2;
+    padding-right: $gap/2;
+  }
+ }
