@@ -4,6 +4,8 @@
   h2::before {
     content: "";
     border: 4px solid #9F1213;
+    padding-top: 3px;
+    padding-bottom: 3px;
     margin-right: 16px;
   }
 }
@@ -16,4 +18,14 @@
   color: $gray-500;
   font-size: 18px;
   border: 1px solid $gray-100;
+}
+
+.store-list{
+  .card-title{
+    display: block;
+    padding: 8px 24px;
+  }
+  .card-content{
+    padding: 16px 24px;
+  }
 }
