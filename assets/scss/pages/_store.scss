@@ -1,6 +1,7 @@
 .store {
   padding-top: 96px;
   padding-bottom: 80px;
+
   h2::before {
     content: "";
     border: 4px solid #9F1213;
@@ -8,24 +9,51 @@
     padding-bottom: 3px;
     margin-right: 16px;
   }
+  @include sm{
+    padding-top: 40px;
+    padding-bottom: 64px;
+    h2::before {
+      padding: 0px;
+    }
+  }
 }
 
-.area-select{
-  width: 304px;
+.area-select {
+  width: 100%;
+  max-width: 304px;
   padding: 6px 12px;
 }
-.area-select-primary{
+
+.area-select-primary {
   color: $gray-500;
   font-size: 18px;
   border: 1px solid $gray-100;
 }
 
-.store-list{
-  .card-title{
+.store-list {
+  row-gap: 48px;
+
+  .card-title {
     display: block;
     padding: 8px 24px;
   }
-  .card-content{
+
+  .card-content {
     padding: 16px 24px;
+  }
+
+  .link{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    &:hover{
+      background-color: $primary;
+    }
+  }
+
+  li {
+    display: flex;
+  }
+  @include sm{
+    row-gap: 24px;
   }
 }
