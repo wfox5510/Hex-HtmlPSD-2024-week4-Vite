@@ -7,7 +7,7 @@
     background-image: url(https://github.com/hexschool/2022-web-layout-training/blob/main/week3-4/home-header-sm.png?raw=true);
   }
 
-  @include sm {
+  @include md {
     padding: 144px 0px;
   }
 }

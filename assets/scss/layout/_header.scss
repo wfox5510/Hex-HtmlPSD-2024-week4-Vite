@@ -22,8 +22,8 @@ h1>a {
   a:hover{
     text-decoration: underline;
   }
-  @include sm{
-    margin: 0px -12px;
+  @include md{
+    margin: 0px -36px;
     padding: 0px;
     gap: 0px;
     flex-wrap: wrap;
@@ -36,5 +36,8 @@ h1>a {
       text-align: center;
       padding: 12px 60px;
     }
+  }
+  @include sm{
+    margin: 0px -12px;
   }
 }

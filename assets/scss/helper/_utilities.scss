@@ -38,6 +38,34 @@
   }
 }
 
+@for $i from 1 through 16 {
+  .m {
+    &b {
+      &-md-#{$i} {
+        margin-bottom: $i*4px;
+      }
+    }
+
+    &r {
+      &-md-#{$i} {
+        margin-right: $i*4px;
+      }
+    }
+
+    &l {
+      &-md-auto {
+        margin-left: auto;
+      }
+    }
+
+    &y {
+      &-md-#{$i} {
+        margin-top: $i*4px;
+        margin-bottom: $i*4px;
+      }
+    }
+  }
+}
 
 @include lg {
   @for $i from 1 through 16 {
@@ -209,13 +237,34 @@
       }
     }
   }
+  @include md {
+    &-md {
+      &-flex {
+        display: flex;
+      }
+
+      &-block {
+        display: block;
+      }
+
+      &-none {
+        display: none;
+      }
+    }
+  }
 }
 
 .flex-direction {
   &-column {
     flex-direction: column;
   }
-
+  @include md {
+    &-md {
+      &-column {
+        flex-direction: column;
+      }
+    }
+  }
   @include sm {
     &-sm {
       &-column {
@@ -250,7 +299,13 @@
     }
   }
 }
-
+@include md {
+  @for $i from 1 through 16 {
+    .gap-md-#{$i} {
+      gap: $i*4px;
+    }
+  }
+}
 @include sm {
   @for $i from 1 through 16 {
     .gap-sm-#{$i} {
@@ -265,6 +320,13 @@
   }
 }
 
+@include md {
+  @for $i from 1 through 16 {
+    .font-size-md-#{$i} {
+      font-size: $i*4px;
+    }
+  }
+}
 
 @include sm {
   @for $i from 1 through 16 {
